@@ -1,27 +1,332 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./output.css" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
+    <body>
+        <header class="absolute inset-x-8 top-0 z-50">
+            <nav class="flex items-center justify-between p-6">
+                <a href="./index.html" class="">
+                    <span class="text-2xl font-semibold">Dan Song's Group</span>
+                </a>
+                <div class="flex gap-x-12">
+                    <a
+                        href="./People.html"
+                        class="text-lg font-medium hover:underline decoration-4 underline-offset-4 decoration-sky-700"
+                        >People</a
+                    >
+                    <a
+                        href="./Publications.html"
+                        class="text-lg font-medium hover:underline decoration-4 underline-offset-4 decoration-sky-700"
+                        >Publication</a
+                    >
+                </div>
+            </nav>
+        </header>
 
-
-<body>
-    <header class="absolute inset-x-0 top-0 z-50">
-        <nav class="flex items-center justify-between p-6 lg:px-8">
-          <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="h-8 w-auto text-2xl font-semibold">Dan Song's Group</span>
-            </a>
-          </div>
-          <div class="hidden lg:flex lg:gap-x-12">
-            <a href="./People.html" class="text-lg font-semibold hover:underline decoration-4 underline-offset-4 decoration-sky-700">People</a>
-            <a href="./Publications.html" class="text-lg font-semibold hover:underline decoration-4 underline-offset-4 decoration-sky-700">Publication</a>
-          </div>
-        </nav>
-      </header>
-
-</body>
+        <div class="relative pt-32">
+            <div class="container mx-auto w-2/3 mb-12">
+                <p class="text-3xl font-semibold">Director</p>
+                <div class="flex flex-row mt-8 items-center">
+                    <img
+                        class="w-28 h-28 rounded-full object-cover"
+                        src="./People/DanSong.jpg"
+                    />
+                    <div class="flex flex-col ml-8">
+                        <p class="text-xl font-medium leading-normal">
+                            Dan Song 宋丹
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Associate Professor
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full h-0.5 bg-gray-200 rounded mt-8 mb-8"></div>
+                <p class="text-3xl font-semibold">PhD Students</p>
+                <div class="flex flex-row mt-8 items-start">
+                    <div class="flex flex-col w-1/2">
+                        <p class="text-xl font-medium leading-normal">
+                            Tianbao Li 李天宝
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2019 on Image generation, 3D model retrieval
+                            and Ai4Science
+                        </p>
+                        <a
+                            class="text-base leading-normal text-sky-700 hover:underline decoration-2"
+                            href="https://tianbao-li.github.io/"
+                            target="_blank"
+                            >Person Website
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full h-0.5 bg-gray-200 rounded mt-8 mb-8"></div>
+                <p class="text-3xl font-semibold">Master Students</p>
+                <div class="flex flex-row flex-wrap items-start gap-y-5 mt-8">
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Dehan Wang 王德涵
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2022 on xxx
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Zhiting Gao 高志廷
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2022
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Shuqi Dai 代舒琪
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2022 on xxx
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Xinwei Fu 付鑫伟
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2022 on xxx
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Yu Wang 王钰
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2022 on xxx
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Xuanpu Zhang 张烜溥
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2022 on xxx
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Shumeng Huo 霍舒萌
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2023 on xxx
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Juan Zhou 周娟
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2023 on xxx
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Sizhe Li 李思哲
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2023 on xxx
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Yiyao Wu 吴依遥
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2023 on xxx
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Ning Liu 刘宁
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2023 on xxx
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Zhekai Qiang 强泽楷
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2023 on xxx
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Boao Song 宋博傲
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2024 on xxx
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            空位不传🏀
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2024 on xxx
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Yuhang Pan 潘宇航
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2024 on xxx
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Yidan Ding 丁一丹
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2024 on xxx
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Man Li 李曼
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2024 on xxx
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full h-0.5 bg-gray-200 rounded mt-8 mb-8"></div>
+                <p class="text-3xl font-semibold">Alumni</p>
+                <div class="flex flex-row flex-wrap items-start gap-y-5 mt-8">
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Ting Zhang 张婷
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2019
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Xiaoqian Zhao 赵小倩
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2019
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Xuejing Jiang 蒋雪静
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2020
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Yue Yang 杨悦
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2020
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Zheqi Zhang 张哲琦
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2020
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Teng Wang 王腾
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2020
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Lulu Wang 王露露
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2020
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Zhenghao Fang 方正豪
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2020
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Yuwei Zhang 张郁伟
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2020
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Jianhao Zeng 曾建豪
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2021
+                        </p>
+                        <a
+                            class="text-base leading-normal text-sky-700 hover:underline decoration-2"
+                            href="https://zengjianhao.github.io/"
+                            target="_blank"
+                            >Person Website
+                        </a>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Yuting Ling 凌玉婷
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2021
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Xinqi Su 苏新奇
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2021
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Chumeng Zhang 张楚萌
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2021
+                        </p>
+                    </div>
+                    <div class="flex flex-col w-96 flex-none">
+                        <p class="text-xl font-medium leading-normal">
+                            Yuanxiang Yang 杨媛翔
+                        </p>
+                        <p class="text-base text-gray-700 leading-normal">
+                            Since 2021
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
