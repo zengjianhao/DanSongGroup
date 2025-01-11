@@ -8,315 +8,200 @@
     </head>
 
     <body>
-        <!-- 背景 -->
-        <div
-            class="absolute inset-x-0 -top-30 -z-10 transform-gpu overflow-hidden blur-3xl"
-        >
-            <div
-                class="relative left-[calc(0%)] aspect-[1155/678] w-[72.1875rem] rotate-[60deg] bg-gradient-to-tr from-[#a2d2ff] from-30% via-[#ffafcc] via-60% to-[#cdb4db] to-100% opacity-30"
-                style="
-                    clip-path: polygon(
-                        74.1% 44.1%,
-                        100% 61.6%,
-                        97.5% 26.9%,
-                        85.5% 0.1%,
-                        80.7% 2%,
-                        72.5% 32.5%,
-                        60.2% 62.4%,
-                        52.4% 68.1%,
-                        47.5% 58.3%,
-                        45.2% 34.5%,
-                        27.5% 76.7%,
-                        0.1% 64.9%,
-                        17.9% 100%,
-                        27.6% 76.8%,
-                        76.1% 97.7%,
-                        74.1% 44.1%
-                    );
-                "
-            ></div>
-        </div>
-        <div
-            class="absolute inset-x-0 top-[calc(50%)] -z-10 transform-gpu overflow-hidden blur-3xl"
-        >
-            <div
-                class="relative left-[calc(70%)] aspect-[1155/678] w-[72.1875rem] -translate-x-1/2 bg-gradient-to-tr from-[#cdb4db] from-30% via-[#ffafcc] via-60% to-[#cdb4db] to-100% opacity-30"
-                style="
-                    clip-path: polygon(
-                        74.1% 44.1%,
-                        100% 61.6%,
-                        97.5% 26.9%,
-                        85.5% 0.1%,
-                        80.7% 2%,
-                        72.5% 32.5%,
-                        60.2% 62.4%,
-                        52.4% 68.1%,
-                        47.5% 58.3%,
-                        45.2% 34.5%,
-                        27.5% 76.7%,
-                        0.1% 64.9%,
-                        17.9% 100%,
-                        27.6% 76.8%,
-                        76.1% 97.7%,
-                        74.1% 44.1%
-                    );
-                "
-            ></div>
-        </div>
-
         <!-- 导航栏 -->
-        <header class="absolute inset-x-8 top-0 z-50">
-            <nav class="flex items-center justify-between p-6">
-                <a href="./index.html" class="">
-                    <span class="text-2xl font-semibold">Dan Song's Group</span>
+        <div class="top-0 mt-6 pl-16 pr-4 flex items-start justify-between">
+                <!-- 导航栏左侧 -->
+                <a href="./index.html">
+                    <span class="text-2xl font-semibold text-sky-700">Dan Song's Group</span>
                 </a>
-                <div class="flex gap-x-12">
-                    <a
-                        href="./People.html"
-                        class="text-lg font-medium hover:underline decoration-4 underline-offset-4 decoration-sky-700"
-                        >People</a
-                    >
-                    <a
-                        href="./Publications.html"
-                        class="text-lg font-medium hover:underline decoration-4 underline-offset-4 decoration-sky-700"
-                        >Publication</a
-                    >
+                <!-- 导航栏右侧 -->
+                <div class="flex items-start justify-start gap-x-8 mt-2">
+                    <a href="./index.html">
+                        <span class="text-lg font-normal text-gray-700 text-sky-700">Home</span>
+                    </a>
+                    <a href="./People.html">
+                        <span class="text-lg font-normal text-gray-700 hover:text-sky-700">People </span>
+                    </a>
+                    <div class="flex flex-col items-start group">
+                        <!-- 下拉标题 -->
+                        <div class="flex flex-row">
+                            <span class="text-lg font-normal text-gray-900">Publication</span>
+                            <svg
+                                class="w-2.5 h-2.5 ms-2 mt-3"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 10 10"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="m1 1 4 4 4-4"
+                                />
+                            </svg>
+                        </div>
+                        <!-- 下拉内容 -->
+                        <div class="invisible flex flex-col rounded-lg mt-2 w-42 shadow group-hover:visible">
+                            <a href="./Publications/Image.html">
+                                <span class="block px-4 py-2 text-sm text-gray-700 font-normal hover:bg-gray-100 hover:text-sky-700">Image Generation</span>
+                            </a>
+                            <a href="./Publications/3D.html">
+                                <span class="block px-4 py-2 text-sm text-gray-700 font-normal hover:bg-gray-100 hover:text-sky-700">3D Model</span>
+                            </a>
+                            <a href="./Publications/AI4Sci.html">
+                                <span class="block px-4 py-2 text-sm text-gray-700 font-normal hover:bg-gray-100 hover:text-sky-700">AI4Science</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </nav>
-        </header>
+            </div>
 
-        <!-- 主体 -->
-        <div class="relative pt-32">
-            <!-- 标题 -->
-            <div class="text-center">
-                <h1
-                    class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-6xl"
-                >
-                    Welcome to the Tianjin University
-                    <br />
-                    Dan Song's Group!
-                </h1>
-                <p class="pt-8 text-lg font-medium text-gray-500 sm:text-xl/8">
-                    Accelerating innovation in Virtual and Augmented Reality
+
+        <!-- 标题 -->
+        <h1 class="text-center text-6xl font-semibold leading-tight tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0480B9] from-30% via-[#6DD5FA] via-80% to-[#FFFFFF] to-90% -mt-8">
+            Welcome to the Tianjin University
+            <br />
+            Dan Song's Group!
+        </h1>
+        <p class="text-center text-2xl font-medium text-gray-500 mt-3">
+            Accelerating innovation in Virtual and Augmented Reality
+        </p>
+
+
+        <!-- 介绍 -->
+        <div class="w-2/3 flex flex-row mt-12 mx-auto">
+            <!-- 左边 -->
+            <div class="w-1/3 flex flex-col justify-center items-center">
+                <img src="./Image/DanSong.jpg" class="w-28 h-28 rounded-full object-cover"/>
+                <p class="text-2xl font-semibold mt-4">
+                    Dan Song 宋丹
+                </p>
+                <div class="w-14 h-1 bg-sky-700 rounded mt-2 mb-4"></div>
+                <p class="text-base font-semibold">
+                    Associate Professor
+                </p>
+                <a href="https://www.tju.edu.cn/" target="_blank">
+                    <span class="block text-base font-semibold text-sky-700">Tianjin University</span>
+                </a>
+                <a href="https://scholar.google.com/citations?user=G-mHRrEAAAAJ&hl=zh-CN" target="_blank">
+                    <span class="block text-base font-semibold text-sky-700">Google Scholar</span>
+                </a>
+                <a href="mailto:dan.song@tju.edu.cn">
+                    <span class="block text-base font-semibold text-sky-700">Email</span>
+                </a>
+
+                <a href="https://seea.tju.edu.cn/info/1014/1460.htm" target="_blank">
+                    <span class="block text-base font-semibold text-sky-700">Chinese Homepage</span>
+                </a>
+            </div>
+            <!-- 右边 -->
+            <div class="w-2/3 pl-8 border-l border-gray-200 text-left">
+                <p class="leading-relaxed text-lg mb-4">
+                    Hi, I am now an Associate Professor with Institute of Television and Image Information of Tianjin University. I received the B.E degree from <a href="https://www.sdu.edu.cn/" target="_blank" class="text-sky-700">Shandong Univeristy</a>, and received the Ph.D. degree from <a href="https://www.zju.edu.cn/" target="_blank" class="text-sky-700">Zhejiang University</a> under the supervision of Prof. <a href="https://person.zju.edu.cn/0096114#0" target="_blank" class="text-sky-700">Ruofeng Tong</a>. My research interest includes: Image generation, 3D model and Ai4Science.
+                </p>
+                <div class="flex justify-between text-base leading-relaxed">
+                    <p class="text-start">PhD in Computer Science</p>
+                    <p class="text-end">2013.09-2018.09</p>
+                </div>
+                <p class="text-base leading-tight text-gray-400 text-start mb-2">
+                    Zhejiang University, China
+                </p>
+                <div class="flex justify-between text-base leading-relaxed">
+                    <p class="text-start">Visiting Scholar in Computer Science</p>
+                    <p class="text-end">2015.03-2016.03</p>
+                </div>
+                <p class="text-base leading-tight text-gray-400 text-start mb-2">
+                    National Centre for Computer Animation, U.K
+                </p>
+                <div class="flex justify-between text-base leading-relaxed">
+                    <p class="text-start">BSc in Software Engineering</p>
+                    <p class="text-end">2009.09-2013.06</p>
+                </div>
+                <p class="text-base leading-tight text-gray-400 text-start mb-2">
+                    Shandong University, China
                 </p>
             </div>
+        </div>
 
-            <!-- 介绍 -->
-            <div class="container mx-auto flex flex-col mt-8">
-                <div class="w-4/6 mx-auto">
-                    <div class="flex flex-row mt-8">
-                        <!-- 左边 -->
-                        <div
-                            class="w-1/3 flex flex-col justify-center items-center"
-                        >
-                            <img
-                                class="w-28 h-28 rounded-full object-cover"
-                                src="./People/DanSong.jpg"
-                            />
-                            <p class="text-2xl font-semibold pt-4">
-                                Dan Song 宋丹
-                            </p>
-                            <div
-                                class="w-14 h-1 bg-sky-700 rounded mt-2 mb-4"
-                            ></div>
-                            <p class="text-base font-semibold">
-                                Associate Professor
-                            </p>
-                            <a
-                                class="block text-base font-semibold text-sky-700 hover:underline decoration-2"
-                                href="https://www.tju.edu.cn/"
-                                target="_blank"
-                                >Tianjin University</a
-                            >
-                            <a
-                                class="block text-base font-semibold text-sky-700 hover:underline decoration-2"
-                                href="https://scholar.google.com/citations?user=G-mHRrEAAAAJ&hl=zh-CN"
-                                target="_blank"
-                                >Google Scholar</a
-                            >
-                            <a
-                                class="block text-base font-semibold text-sky-700 hover:underline decoration-2"
-                                href="mailto:dan.song@tju.edu.cn"
-                                >Email</a
-                            >
-                            <a
-                                class="block text-base font-semibold text-sky-700 hover:underline decoration-2"
-                                href="https://seea.tju.edu.cn/info/1014/1460.htm"
-                                target="_blank"
-                                >Chinese Homepage</a
-                            >
-                        </div>
-                        <!-- 右边 -->
-                        <div
-                            class="w-2/3 pl-8 border-l border-gray-200 border-t-0 text-left"
-                        >
-                            <p class="leading-relaxed text-lg mb-4">
-                                Hi, I am now an Associate Professor with
-                                Institute of Television and Image Information of
-                                Tianjin University. I received the B.E degree
-                                from Shandong Univeristy, and received the Ph.D.
-                                degree from Zhejiang University under the
-                                supervision of Prof.
-                                <a
-                                    class="text-sky-700 hover:underline decoration-2"
-                                    href="https://person.zju.edu.cn/0096114#0"
-                                    target="_blank"
-                                    >Ruofeng Tong</a
-                                >. My research interest includes: Image
-                                generation, 3D model retrieval and Ai4Science.
-                            </p>
 
-                            <div class="grid grid-rows-6">
-                                <div class="flex justify-between">
-                                    <p
-                                        class="text-base leading-relaxed col-span-4 text-start"
-                                    >
-                                        PhD in Computer Science
-                                    </p>
-                                    <p
-                                        class="text-base leading-relaxed col-span-2 text-end"
-                                    >
-                                        2013.09-2018.09
-                                    </p>
-                                </div>
-                                <p
-                                    class="text-base leading-tight text-gray-400 text-start mb-2"
-                                >
-                                    Zhejiang University, China
-                                </p>
-                                <div class="flex justify-between">
-                                    <p
-                                        class="text-base leading-relaxed col-span-4 text-start"
-                                    >
-                                        Visiting Scholar in Computer Science
-                                    </p>
-                                    <p
-                                        class="text-base leading-relaxed col-span-2 text-end"
-                                    >
-                                        2015.03-2016.03
-                                    </p>
-                                </div>
-                                <p
-                                    class="text-base leading-tight text-gray-400 text-start mb-2"
-                                >
-                                    National Centre for Computer Animation, U.K
-                                </p>
-                                <div class="flex justify-between">
-                                    <p
-                                        class="text-base leading-relaxed col-span-4 text-start"
-                                    >
-                                        BSc in Software Engineering
-                                    </p>
-                                    <p
-                                        class="text-base leading-relaxed col-span-2 text-end"
-                                    >
-                                        2009.09-2013.06
-                                    </p>
-                                </div>
-                                <p
-                                    class="text-base leading-tight text-gray-400 text-start mb-2"
-                                >
-                                    Shandong University, China
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 下边 -->
-                    <div class="flex flex-wrap justify-center mt-8">
-                        <div class="w-1/3 p-4">
-                            <div class="bg-gray-100 p-6 rounded-lg">
-                                <img
-                                    class="h-40 rounded w-full object-cover object-center mb-6"
-                                    src="./Interests/tryon.webp"
-                                />
-                                <p class="text-lg font-medium mb-2">
-                                    Image generation
-                                </p>
-                                <ul class="list-disc list-inside mb-2">
-                                    <li>Virtual Try-on</li>
-                                    <li>Image Editting</li>
-                                </ul>
-                                <a
-                                    class="text-sky-700 font-semibold inline-flex items-center"
-                                    href="./Publications.html"
-                                    >Learn More
-                                    <svg
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        class="w-4 h-4 ml-2"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="w-1/3 p-4">
-                            <div class="bg-gray-100 p-6 rounded-lg">
-                                <img
-                                    class="h-40 rounded w-full object-cover object-center mb-6"
-                                    src="./Interests/3d.png"
-                                />
-                                <p class="text-lg font-medium mb-4">
-                                    3D model retrieval
-                                </p>
-                                <ul class="list-disc list-inside mb-2">
-                                    <li>3D model retrieval</li>
-                                </ul>
-                                <a
-                                    class="text-sky-700 font-semibold inline-flex items-center"
-                                    href="./Publications.html"
-                                    >Learn More
-                                    <svg
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        class="w-4 h-4 ml-2"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="w-1/3 p-4">
-                            <div class="bg-gray-100 p-6 rounded-lg">
-                                <img
-                                    class="h-40 rounded w-full object-cover object-center mb-6"
-                                    src="./Interests/ai4sci.jpeg"
-                                />
-                                <p class="text-lg font-medium mb-4">
-                                    Ai4Science
-                                </p>
-                                <ul class="list-disc list-inside mb-2">
-                                    <li>Marine Weather Forecast</li>
-                                </ul>
-                                <a
-                                    class="text-sky-700 font-semibold inline-flex items-center"
-                                    href="./Publications.html"
-                                    >Learn More
-                                    <svg
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        class="w-4 h-4 ml-2"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- 研究兴趣 -->
+        <div class="w-2/3 flex flex-wrap justify-center mt-8 mx-auto">
+            <!-- 图像生成 -->
+            <div class="w-[30%] p-4 bg-gray-100 p-6 m-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="./Image/Interests/tryon.webp"/>
+                <p class="text-lg font-medium">Image generation</p>
+                <ul class="list-disc list-inside mt-2 mb-2">
+                    <li>Virtual Try-on</li>
+                    <li>Image Editting</li>
+                </ul>
+                <a href="./Publications/Image.html" class="text-sky-700 font-semibold inline-flex items-center">
+                    Learn More
+                    <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-4 h-4 ml-2"
+                        viewBox="0 0 24 24"
+                    >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+            <!-- 3D 模型 -->
+            <div class="w-[30%] p-4 bg-gray-100 p-6 m-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="./Image/Interests/3d.png"/>
+                <p class="text-lg font-medium">3D model</p>
+                <ul class="list-disc list-inside mt-2 mb-2">
+                    <li>3D model retrieval</li>
+                    <li>Point cloud</li>
+                </ul>
+                <a href="./Publications/3D.html" class="text-sky-700 font-semibold inline-flex items-center">
+                    Learn More
+                    <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-4 h-4 ml-2"
+                        viewBox="0 0 24 24"
+                    >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+            <!-- AI4Science -->
+            <div class="w-[30%] p-4 bg-gray-100 p-6 m-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="./Image/Interests/ai4sci.jpeg"/>
+                <p class="text-lg font-medium">AI4Science</p>
+                <ul class="list-disc list-inside mt-2 mb-2">
+                    <li>Marine Weather Forecas</li>
+                </ul>
+                <a href="./Publications/AI4Sci.html" class="text-sky-700 font-semibold inline-flex items-center">
+                    Learn More
+                    <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-4 h-4 ml-2"
+                        viewBox="0 0 24 24"
+                    >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
             </div>
         </div>
+
+
+        <!-- 页脚 -->
+        <footer class="mr-24 p-4 text-sm text-gray-500 text-right">
+            Last Updated: 1/7/2025
+        </footer>
     </body>
 </html>

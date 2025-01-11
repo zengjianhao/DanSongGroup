@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./output.css" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <!-- 导航栏 -->
+        <div class="top-0 mt-6 pl-16 pr-4 flex items-start justify-between">
+            <!-- 导航栏左侧 -->
+            <a href="../index.html">
+                <span class="text-2xl font-semibold text-sky-700">Dan Song's Group</span>
+            </a>
+            <!-- 导航栏右侧 -->
+            <div class="flex items-start justify-start gap-x-8 mt-2">
+                <a href="../index.html">
+                    <span class="text-lg font-normal text-gray-700 hover:text-sky-700">Home</span>
+                </a>
+                <a href="../People.html">
+                    <span class="text-lg font-normal text-gray-700 hover:text-sky-700">People </span>
+                </a>
+                <div class="flex flex-col items-start group">
+                    <!-- 下拉标题 -->
+                    <div class="flex flex-row">
+                        <span class="text-lg font-normal text-gray-900 text-sky-700">Publication</span>
+                        <svg
+                            class="w-2.5 h-2.5 ms-2 mt-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 10 10"
+                        >
+                            <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m1 1 4 4 4-4"
+                            />
+                        </svg>
+                    </div>
+                    <!-- 下拉内容 -->
+                    <div class="invisible flex flex-col rounded-lg mt-2 w-42 shadow group-hover:visible">
+                        <a href="./Image.html">
+                            <span class="block px-4 py-2 text-sm text-gray-700 font-normal hover:bg-gray-100 hover:text-sky-700">Image Generation</span>
+                        </a>
+                        <a href="./3D.html">
+                            <span class="block px-4 py-2 text-sm text-gray-700 font-normal hover:bg-gray-100 hover:text-sky-700">3D Model</span>
+                        </a>
+                        <a href="./AI4Sci.html">
+                            <span class="block px-4 py-2 text-sm text-gray-700 font-normal hover:bg-gray-100 hover:text-sky-700">AI4Science</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
