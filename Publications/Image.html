@@ -7,39 +7,19 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body>
-        <!-- 导航栏 -->
-        <div class="top-0 mt-6 pl-16 pr-4 flex items-start justify-between">
-            <!-- 导航栏左侧 -->
-            <a href="../index.html">
-                <span class="text-2xl font-semibold text-sky-700">Dan Song's Group</span>
-            </a>
-            <!-- 导航栏右侧 -->
-            <div class="flex items-start justify-start gap-x-8 mt-2">
-                <a href="../index.html">
-                    <span class="text-lg font-normal text-gray-700 hover:text-sky-700">Home</span>
-                </a>
-                <a href="../People.html">
-                    <span class="text-lg font-normal text-gray-700 hover:text-sky-700">People </span>
-                </a>
-                <div class="flex flex-col items-start group">
+        <!-- 导航 -->
+        <header class="hidden sm:flex flex-row items-start justify-between absolute left-0 right-0 top-0 max-w-5xl mx-auto p-4">
+            <div class="flex flex-row items-start justify-between">
+                <a href="../index.html" class="text-2xl font-medium italic text-sky-700">Dan Song's Group</a>
+            </div>
+            <div class="flex flex-row items-start justify-start gap-x-8">
+                <a href="../index.html" class="text-lg font-normal text-gray-700">Home</a>
+                <a href="../People.html" class="text-lg font-normal text-gray-700 hover:text-sky-700">People</a>
+                <div class="flex flex-col items-start justify-start group">
                     <!-- 下拉标题 -->
-                    <div class="flex flex-row">
-                        <span class="text-lg font-normal text-gray-900 text-sky-700">Publication</span>
-                        <svg
-                            class="w-2.5 h-2.5 ms-2 mt-3"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 10 10"
-                        >
-                            <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="m1 1 4 4 4-4"
-                            />
-                        </svg>
+                    <div class="flex flex-row items-start justify-center">
+                        <span class="text-lg font-normal text-sky-700">Publication</span>
+                        <svg class="w-2.5 h-2.5 ms-2 mt-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>
                     </div>
                     <!-- 下拉内容 -->
                     <div class="invisible flex flex-col rounded-lg mt-2 w-42 shadow group-hover:visible">
@@ -55,125 +35,180 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
+        <header class="bg-sky-700 flex flex-row items-start justify-between absolute left-0 right-0 top-0 py-4 px-8 sm:hidden">
+            <div class="flex flex-col">
+                <p class="text-lg font-medium italic text-white mt-1">Dan Song's Group</p>
+                <nav id="mobile-menu" class="hidden sm:flex flex-col items-start justify-start">
+                    <a href="../index.html">
+                        <span class="block text-base font-normal text-gray-300 mt-3">Home</span>
+                    </a>
+                    <a href="../People.html">
+                        <span class="block text-base font-normal text-gray-300 mt-3">People</span>
+                    </a>
+                    <a href="./Image.html">
+                        <span class="block text-base font-normal text-gray-300 mt-3">Image Generation</span>
+                    </a>
+                    <a href="./3D.html">
+                        <span class="block text-base font-normal text-gray-300 mt-3">3D Model</span>
+                    </a>
+                    <a href="./AI4Sci.html">
+                        <span class="block text-base font-normal text-gray-300 mt-3">AI4Science</span>
+                    </a>
+                </nav>
+            </div>
+            <button class="sm:hidden" onclick="toggleMenu()">
+                <div class="border-2 border-white rounded p-2">
+                    <svg class="w-4 h-4" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </div>
+            </button>
+        </header>
 
 
         <!-- 标题 -->
-        <div class="mx-auto w-2/3 -mt-8 mb-8">
-            <p class="text-2xl font-medium leading-normal">Selected Publications on Image Generation <a href="https://scholar.google.com/citations?user=G-mHRrEAAAAJ&hl=zh-CN" target="_blank" class="text-sky-700">[Google Scholar]</a></p>
-            <div class="w-full h-0.5 bg-gray-200 rounded mt-8 mb-8"></div>
-        </div>
+        <p class="hidden sm:block mx-auto max-w-4xl text-left text-xl font-normal text-gray-500 mt-24">
+            Selected Publications on Image Generation <a href="https://scholar.google.com/citations?user=G-mHRrEAAAAJ&hl=zh-CN" target="_blank" class="text-sky-700">[Google Scholar]</a>
+        </p>
+        <p class="mx-8 mt-24 text-lg font-medium text-gray-500 sm:hidden">
+            Selected Publications on Image Generation <a href="https://scholar.google.com/citations?user=G-mHRrEAAAAJ&hl=zh-CN" target="_blank" class="text-sky-700">[Google Scholar]</a>
+        </p>
+
+        <div class="hidden sm:block mx-auto max-w-4xl w-full h-0.5 bg-gray-200 rounded mt-4 mb-4"></div>
+        <div class="mx-8 mt-8 mb-8 w-full h-0.5 bg-gray-200 rounded sm:hidden"></div>
+
 
         <!-- 2025 -->
-         <div class="mx-auto w-2/3 mb-8">
+        <div class="hidden sm:block max-w-4xl mx-auto">
             <p class="text-2xl font-medium leading-normal">2025</p>
-            <div class="flex flex-col justify-start items-between mt-6">
-                <div class="flex flex-row justify-start mt-4">
-                    <img src="../Image/Image/Boow.jpg" class="w-72 h-auto">
-                    <div class="flex flex-col justify-center items-start ml-12">
+            <div class="flex flex-col items-start justify-start mt-4">
+                <div class="flex flex-row items-center justify-start">
+                    <img src="../Image/Image/Boow.jpg" class="w-72 h-auto bg-white">
+                    <div class="flex flex-col items-start justify-center ml-12">
                         <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Zhang_BooW-VTON_Boosting_In-the-Wild_Virtual_Try-On_via_Mask-Free_Pseudo_Data_Training_CVPR_2025_paper.pdf" target="_blank" class="text-xl font-semibold text-sky-700 mb-4">BooW-VTON: Boosting In-the-Wild Virtual Try-On via Mask-Free Pseudo Data Training</a>
-                        <p class="text-gray-500">Xuanpu Zhang, Dan Song#, Pengxin Zhan, Tianyu Chang, Jianhao Zeng, Qingguo Chen, Weihua Luo, Anan Liu</p>
+                        <p class="text-gray-500 mb-4">Xuanpu Zhang, Dan Song, Pengxin Zhan, Tianyu Chang, Jianhao Zeng, Qingguo Chen, Weihua Luo, Anan Liu</p>
                         <p class="italic">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025</p>
                     </div>
                 </div>
+                <div class="w-full h-0.5 bg-gray-200 rounded mt-4 mb-4"></div>
             </div>
-
-         </div>
-
+        </div>
 
 
         <!-- 2024 -->
-        <div class="mx-auto w-2/3 mb-8">
+        <div class="hidden sm:block max-w-4xl mx-auto">
             <p class="text-2xl font-medium leading-normal">2024</p>
-            <div class="flex flex-col justify-start items-between mt-6">
-                <div class="flex flex-row justify-start mt-4">
-                    <img src="../Image/Image/Survey.png" class="w-72 h-auto">
-                    <div class="flex flex-col justify-center items-start ml-12">
+            <div class="flex flex-col items-start justify-start mt-4">
+                <div class="flex flex-row items-center justify-start">
+                    <img src="../Image/Image/Survey.png" class="w-72 h-auto bg-white">
+                    <div class="flex flex-col items-start justify-center ml-12">
                         <a href="https://link.springer.com/article/10.1007/s11263-024-02305-2" target="_blank" class="text-xl font-semibold text-sky-700 mb-4">Image-based virtual try-on: A survey</a>
-                        <p class="text-gray-500">Dan Song, Xuanpu Zhang, Juan Zhou, Weizhi Nie, Ruofeng Tong, Mohan Kankanhalli, Anan Liu</p>
+                        <p class="text-gray-500 mb-4">Dan Song, Xuanpu Zhang, Juan Zhou, Weizhi Nie, Ruofeng Tong, Mohan Kankanhalli, Anan Liu</p>
                         <p class="italic">International Journal of Computer Vision (IJCV)</p>
                     </div>
                 </div>
-                <div class="flex flex-row justify-start mt-6">
-                    <img src="../Image/Image/Better.jpg" class="w-72 h-auto">
-                    <div class="flex flex-col justify-center items-start ml-12">
+                <div class="w-full h-0.5 bg-gray-200 rounded mt-4 mb-4"></div>
+                <div class="flex flex-row items-center justify-start">
+                    <img src="../Image/Image/Better.jpg" class="w-72 h-auto bg-white">
+                    <div class="flex flex-col items-start justify-center ml-12">
                         <a href="https://arxiv.org/abs/2403.08453" target="_blank" class="text-xl font-semibold text-sky-700 mb-4">Better Fit: Accommodate Variations in Clothing Types for Virtual Try-on</a>
-                        <p class="text-gray-500">Dan Song, Xuanpu Zhang, Jianhao Zeng, Pengxin Zhan, Qingguo Chen, Weihua Luo, Anan Liu</p>
+                        <p class="text-gray-500 mb-4">Dan Song, Xuanpu Zhang, Jianhao Zeng, Pengxin Zhan, Qingguo Chen, Weihua Luo, Anan Liu</p>
                         <p class="italic">IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</p>
                     </div>
                 </div>
-                <div class="flex flex-row justify-start mt-6">
-                    <img src="../Image/Image/CAT-DM.png" class="w-72 h-auto">
-                    <div class="flex flex-col justify-center items-start ml-12">
+                <div class="w-full h-0.5 bg-gray-200 rounded mt-4 mb-4"></div>
+                <div class="flex flex-row items-center justify-start">
+                    <img src="../Image/Image/CAT-DM.png" class="w-72 h-auto bg-white">
+                    <div class="flex flex-col items-start justify-center ml-12">
                         <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Zeng_CAT-DM_Controllable_Accelerated_Virtual_Try-on_with_Diffusion_Model_CVPR_2024_paper.pdf" target="_blank" class="text-xl font-semibold text-sky-700 mb-4">CAT-DM: Controllable Accelerated Virtual Try-on with Diffusion Model</a>
-                        <p class="text-gray-500">Jianhao Zeng, Dan Song, Weizhi Nie, Hongshuo Tian, Tongtong Wang, Anan Liu</p>
+                        <p class="text-gray-500 mb-4">Jianhao Zeng, Dan Song, Weizhi Nie, Hongshuo Tian, Tongtong Wang, Anan Liu</p>
                         <p class="italic">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024</p>
                     </div>
                 </div>
+                <div class="w-full h-0.5 bg-gray-200 rounded mt-4 mb-4"></div>
             </div>
-            <div class="w-full h-0.5 bg-gray-200 rounded mt-8 mb-8"></div>
         </div>
 
 
         <!-- 2023 -->
-        <div class="mx-auto w-2/3 mb-8">
+        <div class="hidden sm:block max-w-4xl mx-auto">
             <p class="text-2xl font-medium leading-normal">2023</p>
-            <div class="flex flex-col justify-start items-between mt-6">
-                <div class="flex flex-row justify-start mt-4">
-                    <img src="../Image/Image/FC.jpg" class="w-72 h-auto">
-                    <div class="flex flex-col justify-center items-start ml-12">
+            <div class="flex flex-col items-start justify-start mt-4">
+                <div class="flex flex-row items-center justify-start">
+                    <img src="../Image/Image/FC.jpg" class="w-72 h-auto bg-white">
+                    <div class="flex flex-col items-start justify-center ml-12">
                         <a href="https://link.springer.com/article/10.1007/s11263-024-02305-2" target="_blank" class="text-xl font-semibold text-sky-700 mb-4">Fashion Customization: Image Generation Based on Editing Clue</a>
-                        <p class="text-gray-500">Dan Song, Jianhao Zeng, Min Liu, Xuanya Li, Anan Liu</p>
+                        <p class="text-gray-500 mb-4">Dan Song, Jianhao Zeng, Min Liu, Xuanya Li, Anan Liu</p>
                         <p class="italic">IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</p>
                     </div>
                 </div>
+                <div class="w-full h-0.5 bg-gray-200 rounded mt-4 mb-4"></div>
             </div>
-            <div class="flex flex-col justify-start items-between mt-6">
-                <div class="flex flex-row justify-start mt-4">
-                    <img src="../Image/Image/StyleIPSB.png" class="w-72 h-auto">
-                    <div class="flex flex-col justify-center items-start ml-12">
-                        <a href="http://openaccess.thecvf.com/content/CVPR2023/html/Jiang_StyleIPSB_Identity-Preserving_Semantic_Basis_of_StyleGAN_for_High_Fidelity_Face_CVPR_2023_paper.html" target="_blank" class="text-xl font-semibold text-sky-700 mb-4">StyleIPSB: Identity-Preserving Semantic Basis of StyleGAN for High Fidelity Face Swapping</a>
-                        <p class="text-gray-500">Diqiong Jiang, Dan Song, Ruofeng Tong, Min Tang</p>
+            <div class="flex flex-col items-start justify-start mt-4">
+                <div class="flex flex-row items-center justify-start">
+                    <img src="../Image/Image/StyleIPSB.png" class="w-72 h-auto bg-white">
+                    <div class="flex flex-col items-start justify-center ml-12">
+                        <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Jiang_StyleIPSB_Identity-Preserving_Semantic_Basis_of_StyleGAN_for_High_Fidelity_Face_CVPR_2023_paper.pdf" target="_blank" class="text-xl font-semibold text-sky-700 mb-4">StyleIPSB: Identity-Preserving Semantic Basis of StyleGAN for High Fidelity Face Swapping</a>
+                        <p class="text-gray-500 mb-4">Diqiong Jiang, Dan Song, Ruofeng Tong, Min Tang</p>
                         <p class="italic">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2023</p>
                     </div>
                 </div>
+                <div class="w-full h-0.5 bg-gray-200 rounded mt-4 mb-4"></div>
             </div>
-            <div class="w-full h-0.5 bg-gray-200 rounded mt-8 mb-8"></div>
         </div>
 
 
 
         <!-- 2021 -->
-        <div class="mx-auto w-2/3 mb-8">
+        <div class="hidden sm:block max-w-4xl mx-auto">
             <p class="text-2xl font-medium leading-normal">2021</p>
-            <div class="flex flex-col justify-start items-between mt-6">
-                <div class="flex flex-row justify-start mt-4">
-                    <img src="../Image/Image/LM-VTON.png" class="w-72 h-auto">
-                    <div class="flex flex-col justify-center items-start ml-12">
-                        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/16309" target="_blank" class="text-xl font-semibold text-sky-700 mb-4">Toward Realistic Virtual Try-on Through Landmark Guided Shape Matching</a>
-                        <p class="text-gray-500">Guoqiang Liu, Dan Song, Ruofeng Tong, Min Tang</p>
+            <div class="flex flex-col items-start justify-start mt-4">
+                <div class="flex flex-row items-center justify-start">
+                    <img src="../Image/Image/LM-VTON.png" class="w-72 h-auto bg-white">
+                    <div class="flex flex-col items-start justify-center ml-12">
+                        <a href="https://cdn.aaai.org/ojs/16309/16309-13-19803-1-2-20210518.pdf" target="_blank" class="text-xl font-semibold text-sky-700 mb-4">Toward Realistic Virtual Try-on Through Landmark Guided Shape Matching</a>
+                        <p class="text-gray-500 mb-4">Guoqiang Liu, Dan Song, Ruofeng Tong, Min Tang</p>
                         <p class="italic">AAAI Conference on Artificial Intelligence (AAAI), 2021</p>
                     </div>
                 </div>
+                <div class="w-full h-0.5 bg-gray-200 rounded mt-4 mb-4"></div>
             </div>
-            <div class="w-full h-0.5 bg-gray-200 rounded mt-8 mb-8"></div>
         </div>
 
 
         <!-- 2020 -->
-        <div class="mx-auto w-2/3 mb-8">
+        <div class="hidden sm:block max-w-4xl mx-auto">
             <p class="text-2xl font-medium leading-normal">2020</p>
-            <div class="flex flex-col justify-start items-between mt-6">
-                <div class="flex flex-row justify-start mt-4">
-                    <img src="../Image/Image/LM-VTON.png" class="w-72 h-auto">
-                    <div class="flex flex-col justify-center items-start ml-12">
+            <div class="flex flex-col items-start justify-start mt-4">
+                <div class="flex flex-row items-center justify-start">
+                    <img src="../Image/Image/SP.png" class="w-72 h-auto bg-white">
+                    <div class="flex flex-col items-start justify-center ml-12">
                         <a href="https://link.springer.com/article/10.1007/s11042-019-08363-w" target="_blank" class="text-xl font-semibold text-sky-700 mb-4">SP-VITON: shape-preserving image-based virtual try-on network</a>
-                        <p class="text-gray-500">Dan Song, Tianbao Li, Zhendong Mao, Anan Liu</p>
+                        <p class="text-gray-500 mb-4">Dan Song, Tianbao Li, Zhendong Mao, Anan Liu</p>
                         <p class="italic">Multimedia Tools and Applications</p>
                     </div>
                 </div>
+                <div class="w-full h-0.5 bg-gray-200 rounded mt-4 mb-4"></div>
             </div>
-            <div class="w-full h-0.5 bg-gray-200 rounded mt-8 mb-8"></div>
         </div>
+
+
+
+        <!-- 页脚 -->
+        <footer class="hidden sm:block max-w-5xl mx-auto mt-8 mb-8 pr-16 text-base text-gray-500 text-right">
+            <!-- Last Updated: 7/5/2025 -->
+        </footer>
+        <footer class="max-w-5xl mx-auto mt-8 mb-8 pr-16 text-base text-gray-500 text-right sm:hidden">
+            <!-- Last Updated: 7/5/2025 -->
+        </footer>
     </body>
+
+
+    <script defer>
+        function toggleMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+    </script>
 </html>
